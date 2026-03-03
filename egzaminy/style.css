@@ -1,0 +1,38 @@
+* {
+    font-family: Garamond;
+}
+body {
+    color: white;
+    text-align: center;
+}
+footer, header {
+    background-color: forestgreen;
+    padding: 10px;
+}
+#lewy, #prawy {
+    background-color: forestgreen;
+    width: 25%;
+    height: 490px;
+    font-size: 30px;
+}
+
+#srodek {
+    float: center;
+}
+#srodek {
+    background-color: chocolate;
+    width: 50%;
+    height: 490px;
+    font-size: 25px;
+    float: center;
+}
+section {
+    float: right;
+}
+
+#img1 {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    float: center;
+}

@@ -1,0 +1,4 @@
+SELECT model, kolor, stan FROM `samochody` WHERE rocznik > 2010;
+UPDATE `samochody` SET `kolor`='ciemny niebieski' WHERE model = "Yaris";
+CREATE USER "joanna"@'localhost' IDENTIFIED by "joan87$";
+grant create, alter on samochody.* to "joanna"@'localhost';

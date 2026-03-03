@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header><h2>Witamy na stacji paliw!</h2></header>
+    <section id="lewy">
+        <a href="index.html">
+        <img src="home.png">
+        </a>
+        <br>
+        <a href="kalkulacja.html">
+        <img src="znak.png">
+        </a>
+    </section>
+    <section id="prawy">
+        <img src="samochod.png" alt="grafika: samochód">
+    </section>
+    <main>
+        <h2>Oblicz, ile litrów musisz zatankować</h2>
+        <label>dystans do przejechania w km</label><br>
+        <input type="number" id="dystans" name="dystans">
+        <br>
+        <label>spalanie samochodu w 1/100km</label><br>
+        <input type="number" id="spalanie" name="spalanie">
+        <br>
+        <input type="submit" value="Oblicz" onclick="oblicz()">
+        <h3 id="wyniki"></h2>
+        </main>
+    <footer class="lewa">Stronę opracował: 345784358</footer>
+    <footer class="prawa"><a href="kwere.txt">Tu pobierzesz zapytania</a></footer>
+    <script>
+
+    function oblicz(){
+    let dystans = document.getElementById("dystans");
+    let spalanie = document.getElementById("spalanie");
+
+    let wynikSpalania = spalanie.value / 100;
+    let wynik = dystans.value * wynikSpalania;
+
+    document.getElementById("wyniki").innerHTML = "Potrzebujesz: "+ wynik + " litrów paliwa";
+    }
+    </script>
+</body>
+</html>

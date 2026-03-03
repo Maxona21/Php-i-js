@@ -1,0 +1,4 @@
+1. CREATE TABLE zamowienia (id int not null PRIMARY KEY , imie varchar(50), nazwisko varchar(50), adres_email varchar(50), liczba_choinek int, liczba_mikolajow int, liczba_reniferow int, info boolean);
+3create user "klient1"@"localhost" IDENTIFIED BY "klient123";
+4. GRANT INSERT on sklep12.* to 'klient1'@'localhost';
+5. INSERT INTO `zamowienia`( `imie`, `nazwisko`, `adres_email`) VALUES ('Jan','Kowalski','jKowalski@poczta.pl');
