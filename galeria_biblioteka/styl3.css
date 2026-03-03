@@ -1,0 +1,51 @@
+* {
+    font-family: Verdana;
+}
+#lewy {
+    background-color: #29434E;
+    color: white;
+    text-align: center;
+    width: 70%;
+    height: 70px;
+    float: left;
+}
+#prawy {
+  background-color: #29434E;
+    color: white;
+    width: 30%;
+    height: 70px;
+    float: left;
+}
+
+.film {
+    background-color: #B0BEC5;
+    height: 320px;
+    overflow: scroll;
+    clear: both;
+}
+footer {
+    background-color: #29434E;
+    color: white;
+}
+#polecane{
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+}
+h3 {
+    background-color: #546E7A;
+    color: white;
+    margin: 0px;
+}
+h4 {
+    text-align: center;
+    margin: 0px;
+}
+.rowne {
+    float: left;
+    text-align: center;
+    padding:5px;
+    width: 226px;
+    height:280px;
+    word-wrap: break-word;
+}

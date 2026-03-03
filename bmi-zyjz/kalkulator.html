@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <header>
+        <img src="baner.gif" alt="baner">
+    </header>
+    <section id="lewy">
+        <hr>
+        <h2><a href="index.html">BMI</a></h2>
+        <hr>
+        <h2><a href="kalkulator.html">Kalkulator</a></h2>
+        <hr>
+    </section>
+    <section id="prawy">
+        <label>waga</label>
+        <br>
+        <input type="number" id="waga">
+        <br>
+        <label>wzrost</label>
+        <br>
+        <input type="number" id="wzrost">
+        <br>
+        <button onclick="wynik()">Oblicz BMI</button>
+        <br>
+        <p id="wynik"></p>
+        <script>
+            function wynik(){
+               const waga = document.getElementById("waga").value;
+               const wzrost = document.getElementById("wzrost").value;
+               const wyniki = waga / (wzrost**2);
+                const wynik = document.getElementById("wynik").innerHTML = text
+            }
+        </script>
+    </section>
+    <footer>
+        <p>Autor strony: ja <i>UWUWUW</i></p>
+    </footer>
+    </main>
+</body>
+</html>

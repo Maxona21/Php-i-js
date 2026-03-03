@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><img src="baner.png"></header>
+    <section id="gora">
+        <p id="change">Egzamin</p>
+    </section>
+    <section id="left">
+        <label>Treść neonu</label><br>
+        <input type="text" maxlength="10" id="tresc"><br>
+        <button id="klik" onclick="zamianaTekstu()">Zastosuj</button>
+
+       
+
+    </section>
+    <section id="middle">
+        <label>Kolor neonu</label><br>
+        <label>R</label><input type="range" minlength="0" maxlength="255" class="suwak" id="r" onchange="zmianaKoloru()"><br>
+        <label>G</label><input type="range" minlength="0" maxlength="255" class="suwak" id="g" onchange="zmianaKoloru()"><br>
+        <label>B</label><input type="range" minlength="0" maxlength="255" class="suwak" id="b" onchange="zmianaKoloru()"><br>
+    </section>
+    <section id="right">
+        <label>Rozmiar neonu</label><br>
+        <input type="number" minlength="0" maxlength="300" value="100" step="5" id="wielkosc" onchange="zmianaWielkosci()">
+    </section>
+    <footer>
+        <a href="style.css" target="_blank">Otwórz plik ze stylami css</a><br>
+        <p>Stronę wykonał: ja</p>
+    </footer> 
+        <script>
+            function zmianaTekstu(){
+                document.getElementById("change").innerHTML = document.getElementById("tresc").value;
+                             
+            }
+            function zmianaKoloru(){
+                const czerw= document.getElementById("r").value;
+                const ziel= document.getElementById("g").value;
+                const nieb = document.getElementById("b").value;
+                document.getElementById("change").style.color = `rgb(${czerw}, ${ziel}, ${nieb})`;
+
+            }
+            function zmianaWielkosci(){
+                document.getElementById("change").style.fontSize = document.getElementById("wielkosc").value + "px";
+            }
+        </script>
+</body>
+</html>

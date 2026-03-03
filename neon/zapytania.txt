@@ -1,0 +1,4 @@
+zapytanie 1: SELECT DISTINCT imie FROM dane WHERE plec = "k";
+zapytania 2: SELECT imie FROM dane WHERE plec = "m" group by liczebnosc limit 5;
+zapytanie 3: SELECT imie FROM dane inner join wojewodztwa on dane.id_woj = wojewodztwa.id where wojewodztwa.nazwa ="MAZOWIECKIE" order by dane.liczebnosc desc limit 5;
+zapytanie 4: SELECT distinct imie FROM dane WHERE length(imie) <=3;
