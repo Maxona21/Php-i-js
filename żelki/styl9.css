@@ -1,0 +1,32 @@
+* {
+    font-family: Georgia;
+}
+header {
+    float:left;
+    background-color: rgb(197, 85, 160);
+    text-align: center;
+    width: 50%;
+    height: 180px;
+}
+#baner, footer {
+    background-color: rgb(246, 226, 222);
+    text-align: center;
+    padding: 10px;
+}
+#lewy, #prawy {
+    background-color: rgb(197, 85, 160);
+    float: left;
+    color: white;
+    width: 50%;
+    height: 400px;
+}
+footer {
+    clear: both;
+}
+#obraz {
+    background-image: url("cukierki1.png");
+    padding-right: 70px;
+    padding-bottom: 120px;
+    font-size: 150%;
+    text-decoration: none;
+}

@@ -1,0 +1,75 @@
+* {
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(206, 174, 235);
+    margin: 0;
+}
+
+h1{
+    font-size: 3vw;
+    text-align: center;
+    clear: both;
+}
+h3 {
+    font-size: 2vw;
+    clear: both;
+    text-align: center;
+}
+
+.portfolio {
+    width: 40%;
+    min-height: 3vh;
+    padding: 1.5vw;
+    margin: 3vw;
+    float: left;
+    font-size: 2vw;
+    background-color: rgb(150, 126, 172);
+    border-radius: 4px;
+    text-align: center;
+}
+
+h2 {
+    background-color: rgb(150, 126, 172);
+    border-radius: 4px;
+}
+#miejsce {
+    background-color: rgb(138, 124, 153);
+    margin: 2vw;
+    padding: 3px;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .portfolio {
+        font-size: 35px;
+        padding: 2vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .portfolio {
+        width: 30%;
+        font-size: 30px;
+        padding: 2vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio {
+        width: 100%;
+        font-size: 25px;
+        padding: 2vw;
+        margin: 2vw 0;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .portfolio {
+        font-size: 22px;
+        padding: 2vw;
+    }
+}
