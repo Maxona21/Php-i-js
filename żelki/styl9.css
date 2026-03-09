@@ -30,3 +30,12 @@ footer {
     font-size: 150%;
     text-decoration: none;
 }
+table, tr, td {
+    border: 2px solid blue;
+    margin: 20px;
+    padding: 10px;
+}
+h2 {
+    font-size: 200%;
+    word-spacing: 10px;
+}

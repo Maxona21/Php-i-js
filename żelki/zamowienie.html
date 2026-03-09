@@ -38,13 +38,35 @@
         <label>Podaj numer kształtu:</label><br>
         <input type="number" id="ksztalt"><br>
         <p>Skomponuj swój kolor, podaj RGB</p>
-        <label>R</label><input type="number"><br>
-        <label>G</label><input type="number"><br>
-        <label>B</label><input type="number"><br>
+        <label>R</label><input type="number" id="czerwony" onchange="zmianaKoloru()">
+        <label>G</label><input type="number" id="zielony" onchange="zmianaKoloru()">
+        <label>B</label><input type="number" id="niebieski" onchange="zmianaKoloru()">
         <button id="zamow" onclick="zamow()">Zamów</button>
-        <p>Wybrany kształt</p>
-        <button>Wybrany kolor</button>
+
+        <p id="change">Wybrany kształt: </p>
+
+        <button id="kolor" onclick="zmianaKoloru()">Wybrany kolor</button>
     </section>
     <footer><i><p>Autor strony: ja</p></i></footer>
+    <script>
+        function zamow(){
+            const produkt = document.getElementById("ksztalt").value;
+        if ( produkt == 1){
+            document.getElementById("change").innerHTML = "Zamówiłeś: miś";
+        } else if (produkt == 2) {
+           document.getElementById("change").innerHTML = "Zamówiłeś: żabka"; 
+        } else if (produkt == 3){
+            document.getElementById("change").innerHTML = "Zamówiłeś: serce";
+        } else {
+            document.getElementById("change").innerHTML = "inny kształt";
+        }
+        }
+        function zmianaKoloru() {
+            const red = document.getElementById("czerwony").value;
+            const green = document.getElementById("zielony").value;
+            const blue = document.getElementById("niebieski").value;
+            document.getElementById("kolor").style.backgroundColor = `rgb(${red}, ${green}, ${blue} )`;
+        }
+    </script>
 </body>
 </html>
