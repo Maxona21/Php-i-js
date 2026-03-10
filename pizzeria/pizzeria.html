@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Margherita</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <header>
+        <h2>Najlepsza pizza w mieście</h2>
+        <img src="pizza.png" height="100px">
+    </header>
+
+    <section id="lewy">
+        <p>U nas zamówisz pizzę z dowozem</p>
+        <a href="pizza.png">Nasze logo</a>
+    </section>
+
+    <section id="middle">
+        <h3>Pizzeria Margherita</h3>
+        <p>ul. Botaniczna 4, Zielona Góra</p>
+    </section>
+
+    <section id="prawy">
+        <h3>Oferta</h3>
+        <ol>
+            <li>Pizza</li>
+            <li>Lasagne</li>
+            <li>Sałatki</li>
+            <br>
+            <a href="Oferta.txt" id="oferty">Pobierz pełną ofertę</a>
+        </ol>
+    </section>
+
+    <section id="dolny">
+        <h3>Oblicz koszt dostawy</h3>
+        <input type="checkbox" name="miejsce" id="miejsce"><label for="miejsce">Jestem z Zielonej Góry</label>
+        <p>albo</p>
+        <label>Podaj liczbę kilometrów od Zielonej góry</label>
+        <input type="number" id="km"><br>
+        <button onclick="dojazd()">Oblicz</button>
+        <p id="wynik"></p>
+    </section>
+    <footer><p>Stronę internetową opracował: <b>JA</b> </p></footer>
+    <script>
+        function dojazd(){
+        const km = document.getElementById("km").value;
+        const miejsce = document.getElementById("miejsce").checked;
+        if (miejsce){
+            document.getElementById("wynik").innerHTML = "Dowieziemy Twoją pizzę za darmo";
+        } else {
+            const suma = 2* km;
+            document.getElementById("wynik").innerHTML = "Dowóz będzie Cię kosztował: "+ suma +" złotych";
+        }
+        }
+
+    </script>
+</body>
+</html>
