@@ -5,7 +5,8 @@
 header, footer {
     background-color: Tomato;
     color: mistyrose;
-    padding: 10px;;
+    padding: 10px;
+    clear: both;
 }
 nav {
     width: 20%;
@@ -24,6 +25,7 @@ main {
     width: 80%;
     height: 510px;
     overflow: auto;
+    float: left;
 }
 table {
     margin: auto;
@@ -38,6 +40,9 @@ dt {
     font-style: italic;
     font-weight: bold;
 }
-dt:hover {
+dl:hover {
     font-size: 180%;
+}
+#sekcja2, #sekcja3{
+    display: none;
 }

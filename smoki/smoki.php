@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smoki</title>
     <link rel="stylesheet" href="styl.css">
+    <script src="bloki.js" defer></script>
 </head>
 <body>
     <header>
         <h2>Poznaj smoki!</h2>
     </header>
     <nav>
-        <section id="nav1" class="blok">Baza</section>
-        <section id="nav2" class="blok">Opisy</section>
-        <section id="nav3" class="blok">Galeria</section>
+        <section id="nav1" class="blok" onclick="blok1()">Baza</section>
+        <section id="nav2" class="blok" onclick="opisy()">Opisy</section>
+        <section id="nav3" class="blok" onclick="Galeria()">Galeria</section>
+       
     </nav>
     <main>
         <section id="sekcja1">
             <h3>Baza Smoków </h3>
-            <form method="POST" action="smoki">
-            <select>
+
+            <form method="POST" action="smoki.php">
+            <select name="wybor" id="wybor">
             <?php
             $con = mysqli_connect("localhost", "root","","smoki");
             $query1 = "SELECT DISTINCT pochodzenie FROM smok order by pochodzenie asc;";
@@ -29,8 +32,9 @@
             }
             ?>
             </select>
-            <input type="submit" id="przycisk" name="szukanie" value="szukaj">
+            <button type="submit">Szukaj</button>
             </form>
+
             <table>
                 <tr>
                     <th>Nazwa</th>
@@ -38,12 +42,15 @@
                     <th>Szerokość</th>
                 </tr>
                 <?php
-                $query2 = "SELECT nazwa, dlugosc, szerokosc FROM `smok` WHERE pochodzenie = 'Polska';";
+                if (isset($_POST["wybor"]) && !empty($_POST["wybor"])){
+                $kraj = $_POST["wybor"];
+                $query2 = "SELECT nazwa, dlugosc, szerokosc FROM `smok` WHERE pochodzenie = '$kraj';";
                 $result1 = mysqli_query($con, $query2);
                 while ($row = mysqli_fetch_row($result1)){
                 echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>";
-                    }
-                    
+                    }    
+                } 
+                mysqli_close($con);
                 ?>
             </table>
     </section>
@@ -57,9 +64,6 @@
                 <dt>Smok niebieski </dt>
                     <dd>Pochodzi z Francji. Ma 100 lat. Żywi się owocami morza. Jest natchnieniem dla najlepszych malarzy. Często im pozuje. Smok ten jest przyjacielem ludzi i czasami im pomaga. Jest jednak próżny i nie lubi się przepracowywać. </dd>
             </dl>
-            <?php
-            mysqli_close($con);
-            ?>
         </section>
         <section id="sekcja3">
             <h3>Galeria </h3>
