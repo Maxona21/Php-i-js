@@ -1,0 +1,54 @@
+*{
+    font-family: Arial;
+}
+body {
+    background-color: blanchedalmond;
+}
+header, footer {
+    background-color: sienna;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 130%;
+}
+#lewy, #prawy, nav {
+    float: left;
+}
+footer{
+    clear: both;
+}
+#lewy {
+    background-color: navajowhite;
+    margin: 10px;
+    padding: 20px;
+    width: 35%;
+    height: 400px;
+    box-shadow: 5px 5px 10px dimgray;
+
+}
+nav {
+    width: 50%;
+    height: 50px;
+}
+#prawy {
+    width: 50%;
+    height: 420px;
+    overflow: scroll;
+}
+input, button {
+    margin: 20px;
+}
+ul {
+    display: inline-block;
+}
+img {
+    width: 10%;
+    float: right;
+}
+a {
+    color: sienna;
+    margin-right:30px ;
+}
+a:hover{
+    color: #4C1900;
+}
