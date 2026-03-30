@@ -1,0 +1,4 @@
+SELECT imie, nazwisko FROM `osoby` WHERE dataUr like "200%";
+SELECT DISTINCT miasto FROM `adresy` group by miasto asc;
+SELECT imie, nazwisko, numer FROM `osoby` inner join telefony on osoby.id = telefony.Osoby_id;
+alter table adresy add numerMieszkania int after numer;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep-Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zarejestruj się w skelpie</h1>
+    </header>
+    <aside> 
+        <img src="obraz.png" alt="promocja">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </aside>
+    <main>
+        <button id="klient">Klient</button>
+        <button id="adres">Adres</button>
+        <button id="kontakt">Kontakt</button>
+        <section id="pierwszy" class="kontrole">
+            <p>Imię</p><input type="text" id="imie" placeholder="Wpisz dane..." ul>
+            <p>Nazwisko</p> <input type="number" id="nazwisko">
+            <p>Data urodzenia</p> <input type="date" id="data">
+        </section>
+        <section id="drugi" class="kontrole">
+            <p>Ulica</p> <input type="text" id="ulica">
+            <p>Numer</p> <input type="number" id="numer">
+            <p>Miasto</p> <input type="text" id="miasto">
+        </section>
+        <section id="trzeci" class="kontrole">
+            <p>Numer komórkowy</p> <input type="tel" id="telefon"><br>
+            <input type="checkbox" value="rodo"><p>Akceptuje rodo</p>
+            <button id="zat">Zatwierdź dane</button>
+        </section>
+    </main>
+    <progress><section id="postep"></section></progress>
+    <footer>
+        <h4>
+            Rejestrację do skelpu wykonał: ja
+        </h4>
+    </footer>
+    <script>
+        function Klient(){
+            document.getElementById("pierwszy")
+        }
+    </script>
+</body>
+</html>
