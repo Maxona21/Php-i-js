@@ -23,7 +23,7 @@ main {
 width: 73%;
 height: 400px;
 }
-header, main{
+header, main, div{
     float:right;
 }
 button{
@@ -43,7 +43,7 @@ button:hover{
     margin-right: 80px;
     padding: 10px;
 }
-progress{
+div{
     width: 73%;
     background-color: lightgray;
     margin-bottom: 10px;
@@ -53,7 +53,7 @@ progress{
     background-color: navy;
     width: 4%;
     height: 30px;
-    float: right
+
 }
 table {
     width: 100%;
@@ -66,4 +66,7 @@ table {
 }
 aside {
     float: left;
+}
+footer {
+    clear: both;
 }

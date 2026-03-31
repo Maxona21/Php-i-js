@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklep-Rejestracja</title>
     <link rel="stylesheet" href="styl.css">
+    <script src="blok.js" defer></script>
 </head>
 <body>
     <header>
@@ -29,35 +30,30 @@
         </table>
     </aside>
     <main>
-        <button id="klient">Klient</button>
-        <button id="adres">Adres</button>
-        <button id="kontakt">Kontakt</button>
+        <button id="klient" onclick="Klient()">Klient</button>
+        <button id="adres" onclick="adres()">Adres</button>
+        <button id="kontakt" onclick="kontakt()">Kontakt</button>
         <section id="pierwszy" class="kontrole">
-            <p>Imię</p><input type="text" id="imie" placeholder="Wpisz dane..." ul>
-            <p>Nazwisko</p> <input type="number" id="nazwisko">
-            <p>Data urodzenia</p> <input type="date" id="data">
+            <p>Imię</p><input type="text" id="imie" placeholder="Wpisz dane..." onfocusout="updateProgress()">
+            <p>Nazwisko</p> <input type="text" id="nazwisko" onfocusout="updateProgress()">
+            <p>Data urodzenia</p> <input type="date" id="data" onfocusout="updateProgress()">
         </section>
         <section id="drugi" class="kontrole">
-            <p>Ulica</p> <input type="text" id="ulica">
-            <p>Numer</p> <input type="number" id="numer">
-            <p>Miasto</p> <input type="text" id="miasto">
+            <p>Ulica</p> <input type="text" id="ulica" onfocusout="updateProgress()">
+            <p>Numer</p> <input type="number" id="numer" onfocusout="updateProgress()">
+            <p>Miasto</p> <input type="text" id="miasto" onfocusout="updateProgress()">
         </section>
         <section id="trzeci" class="kontrole">
-            <p>Numer komórkowy</p> <input type="tel" id="telefon"><br>
-            <input type="checkbox" value="rodo"><p>Akceptuje rodo</p>
-            <button id="zat">Zatwierdź dane</button>
+            <p>Numer komórkowy</p> <input type="tel" id="telefon" onfocusout="updateProgress()"><br>
+            <input type="checkbox" id="rodo" value="rodo" onfocusout="updateProgress()"><p>Akceptuje rodo</p>
+            <button id="zat" onclick="info()">Zatwierdź dane</button>
         </section>
     </main>
-    <progress><section id="postep"></section></progress>
+    <div><section id="postep"></section></div>
     <footer>
         <h4>
             Rejestrację do skelpu wykonał: ja
         </h4>
     </footer>
-    <script>
-        function Klient(){
-            document.getElementById("pierwszy")
-        }
-    </script>
 </body>
 </html>
