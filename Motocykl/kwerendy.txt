@@ -1,4 +1,0 @@
-SELECT nazwa FROM wycieczki WHERE poczatek="Muszyna" or poczatek ="Wieliczka";
-SELECT nazwa, opis, poczatek, zdjecia.zrodlo FROM wycieczki inner join zdjecia on wycieczki.zdjecia_id = zdjecia.id;
-SELECT count(id) FROM `wycieczki`;
-alter table wycieczki add ocena int;
