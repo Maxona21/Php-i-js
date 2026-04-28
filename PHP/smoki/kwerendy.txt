@@ -1,0 +1,4 @@
+zapytanie 1: SELECT nazwa, dlugosc, szerokosc FROM `smok` WHERE pochodzenie = "Polska";
+zapytanie 2: SELECT DISTINCT pochodzenie FROM smok order by pochodzenie asc;
+zapytanie 3: SELECT parada.rok, avg(smok.dlugosc) as SredniaDlugość FROM `udzial`INNER join smok on udzial.id_smok = smok.id INNER join parada on parada.id = udzial.id_parada where parada.rok = 2005 GROUP by parada.rok;
+zapytanie 4: alter table parada add lokalizacja text(100);
