@@ -1,4 +1,0 @@
-SELECT `data` FROM imieniny WHERE imiona like "%Karola%";
-SELECT imiona FROM imieniny WHERE `data` = "04-05";
-SELECT count(data) FROM `imieniny` WHERE imiona like "%mir%" or imiona like "%Mir%";
-alter table imieniny add zyczenia text(500);
