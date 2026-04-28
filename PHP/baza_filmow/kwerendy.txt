@@ -1,0 +1,4 @@
+zapytanie 1: SELECT tytul, rok, ocena FROM `filmy` where gatunki.id = 5;
+zapytanie 2; SELECT rezyserzy.id, filmy.tytul, rezyserzy.imie, rezyserzy.nazwisko from filmy inner join rezyserzy on filmy.rezyserzy_id = rezyserzy.id;
+zapytanie 3: SELECT id, tytul from filmy where rok = 2017 and ocena= 6;
+zapytanie 4: UPDATE `rezyserzy` SET `imie`='Francis Ford' WHERE id= 8;
