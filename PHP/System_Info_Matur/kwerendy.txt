@@ -1,0 +1,5 @@
+SELECT id, imie, nazwisko FROM `maturzysta` WHERE szkola = "T3" order by nazwisko ;
+SELECT DISTINCT przedmiot FROM `arkusz`;
+SELECT DISTINCT rok FROM `arkusz` WHERE rok > 2005 or rok < 2001 limit 2;
+SELECT maturzysta.id, avg(wynik.punkty) as wynik FROM `maturzysta` inner join wynik on maturzysta.id = wynik.maturzysta_id group by id order by wynik desc limit 1;
+SELECT rok, sesja, przedmiot FROM `arkusz` INNER join wynik on arkusz.symbol = wynik.symbol where wynik.maturzysta_id = 31;
