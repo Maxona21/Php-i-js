@@ -1,0 +1,4 @@
+SELECT count(id) as liczbaKlientow FROM klienci;
+SELECT Nazwisko, Imie, zamowienia.id_klienta, kod_koloru, pojemnosc, data_odbioru FROM zamowienia inner join klienci on zamowienia.id_klienta = klienci.Id group by data_odbioru asc;
+SELECT Nazwisko, Imie, zamowienia.id_klienta, kod_koloru, pojemnosc, data_odbioru FROM zamowienia inner join klienci on zamowienia.id_klienta = klienci.Id where data_odbioru > "2021-11-05" and data_odbioru < "2021-11-07" group by data_odbioru asc;
+SELECT Imie, Nazwisko FROM `klienci` WHERE Plec = "k";
