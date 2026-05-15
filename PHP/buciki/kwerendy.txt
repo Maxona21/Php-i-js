@@ -1,0 +1,4 @@
+1.SELECT model FROM produkt;
+2.SELECT produkt.model, nazwa, cena, nazwa_pliku FROM produkt inner join buty on produkt.model = buty.model;
+3.SELECT nazwa, cena, kolor, kod_produktu, material, nazwa_pliku FROM buty join produkt on buty.model = produkt.model where buty.model = "P-59-03";
+4.INSERT INTO kategorie( `nazwa_kat`) VALUES ('Sandały');
