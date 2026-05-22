@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylizacja paznokci</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside>
+        <img src="manicure.jpg" alt="Stylizacja paznokci">
+    </aside>
+    <main>
+        <header>
+            <h1>Twoje wymarzone paznokcie</h1>
+        </header>
+        <nav>
+            <button id="first" onmouseover="show1()">Kolor</button>
+            <button class="crimson" id="second" onmouseover="show2()">Kształt</button>
+            <button class="crimson" id="third" onmouseover="show3()">Wzór</button>
+        </nav>
+        <section id="pierwszy">
+            <h2>Kolor</h2>
+            <img src="kolory.png" alt="Kolory paznokci">
+            <input type="color" value="#FF0000" id="kolor">
+        </section>
+        <section id="drugi">
+            <h2>Kształt</h2>
+            <img src="ksztalt.png" alt="Kształty paznokci">
+            <select id="kszalt">
+                <option value="migdał">migdał</option>
+                <option value="zaokrąglony">zaokrąglony</option>
+                <option value="kwadratowy">kwadratowy</option>
+                <option value="balernia">balernia</option>
+                <option value="zaokrąglonyKwadrat"> zaokrąglony Kwadrat</option>
+            </select>
+        </section>
+        <section id="trzeci">
+            <h2>Wzór</h2>
+            <input type="number" min="1" max="10">
+
+            <div id="zdjecia"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Autor strony: <em>Numer zdającego</em></p>
+    </footer>
+    <script>
+        function show1(){
+            document.getElementById("pierwszy").style.display = "block";
+            document.getElementById("drugi").style.display = "none";
+            document.getElementById("trzeci").style.display = "none";
+
+            document.getElementById("first").style.backgroundColor = "salmon";
+            document.getElementById("third").style.backgroundColor = "crimson";
+            document.getElementById("second").style.backgroundColor = "crimson";
+        }
+        function show2(){
+            document.getElementById("drugi").style.display = "block";
+            document.getElementById("pierwszy").style.display = "none";
+            document.getElementById("trzeci").style.display = "none";
+
+            document.getElementById("second").style.backgroundColor = "salmon";
+            document.getElementById("first").style.backgroundColor = "crimson";
+            document.getElementById("third").style.backgroundColor = "crimson";
+        }
+        function show3(){
+            document.getElementById("trzeci").style.display = "block";
+            document.getElementById("drugi").style.display = "none";
+            document.getElementById("pierwszy").style.display = "none";
+
+            document.getElementById("third").style.backgroundColor = "salmon";
+            document.getElementById("first").style.backgroundColor = "crimson";
+            document.getElementById("second").style.backgroundColor = "crimson";
+
+            for (i = 1; i <=10; i++){
+                document.getElementById("zdjecia").innerHTML += "<img src='"+i+".jpg' alt='wzory' class='wzory'>";
+            }
+        }
+           
+    </script>
+</body>
+</html>
