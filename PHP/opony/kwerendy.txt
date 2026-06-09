@@ -1,0 +1,4 @@
+zap1: SELECT * FROM opony order by cena asc limit 10;
+zap2: SELECT producent, model,sezon, cena FROM opony where nr_kat = 9;
+zap3: SELECT id_zam, ilosc, model, cena FROM zamowienie inner join opony on zamowienie.nr_kat = opony.nr_kat order by rand() limit 1;
+zap4:UPDATE opony SET cena=cena * 0.75 where sezon = "letnia";
